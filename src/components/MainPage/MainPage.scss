@@ -1,0 +1,25 @@
+.app-main-content{
+  text-align: center;
+  margin: 5vh 0 0 0;
+  width:100%;
+  position:relative;
+}
+
+.app-main-content-text{
+  position:absolute;
+  left: 20vw;
+  right: 20vw;
+  margin: 5vh 0 0 0;
+  >p{
+    margin: 1vh 0 1vh 0;
+  }
+  ul{
+    position: absolute;
+    left:20vw;
+    width: 15%;
+    li{
+      margin: 1vh 0 1vh 0;
+      list-style-type: disc;
+    }
+  }
+}

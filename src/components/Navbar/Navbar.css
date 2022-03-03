@@ -3,25 +3,54 @@
   position: absolute;
   left: 10%;
 }
+.app-todo:hover, .app-main:hover {
+  font-size: 24px;
+  color: #6980d4;
+  transition: all 300ms ease-in-out;
+}
 
+@keyframes slidein2 {
+  from {
+    margin-top: 300%;
+  }
+  to {
+    margin-top: 0;
+  }
+}
 .app-navbar {
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 22px;
   grid-area: n;
   justify-content: center;
   position: relative;
-}
-.app-navbar > :hover {
-  color: #6980d4;
-  transition: all 200ms ease-in-out;
+  animation-duration: 2s;
+  animation-name: slidein2;
 }
 
 .app-main {
-  top: 40%;
+  top: 45%;
   width: 80%;
 }
 
 .app-todo {
-  bottom: 40%;
+  bottom: 45%;
   width: 80%;
+}
+
+.app-line-center {
+  left: 27%;
+  top: 45%;
+  position: absolute;
+  height: 100px;
+  width: 50px;
+  transform: rotate(0.75turn);
+}
+
+.app-line-right {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 68%;
 }
 
 /*# sourceMappingURL=Navbar.css.map */
