@@ -1,1 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
 @import 'nullstyle.css';
+
+.app-wrapper{
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 22px;
+  display: grid;
+  grid-template-areas: "n c";
+  grid-template-columns: 10% auto;
+  grid-template-rows: auto;
+  min-height: 100vh;
+  margin:0;
+}
+
+.app-content{
+  grid-area: c;
+}

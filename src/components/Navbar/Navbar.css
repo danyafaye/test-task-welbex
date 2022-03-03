@@ -1,3 +1,31 @@
+.app-todo, .app-main {
+  color: #000000;
+  position: absolute;
+  left: 10%;
+}
 
+.app-navbar {
+  grid-area: n;
+  justify-content: center;
+  position: relative;
+}
+.app-navbar > :hover {
+  color: #6980d4;
+  transition: all 200ms ease-in-out;
+}
+
+.app-main {
+  top: 40%;
+  width: 80%;
+}
+
+.app-todo {
+  bottom: 40%;
+  width: 80%;
+}
+
+.app-active {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
 
 /*# sourceMappingURL=Navbar.css.map */
