@@ -1,3 +1,130 @@
+.app-todo-edit-form, .app-todo-add-form {
+  height: 40vh;
+  width: 40%;
+  position: absolute;
+  left: 50%;
+}
+.app-todo-edit-form button, .app-todo-add-form button {
+  top: 40%;
+  left: 40%;
+  font-size: 20px;
+  position: absolute;
+  padding: 7px;
+}
 
+button {
+  min-width: 7%;
+  border: 0.5px solid black;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2px;
+  transition: all 200ms ease-in-out;
+}
+button:hover {
+  color: #6980d4;
+  border: 0.1px solid #6980d4;
+}
+button:active {
+  color: white;
+  background-color: #6980d4;
+  border: 0.1px solid white;
+}
+
+.app-todos {
+  margin: 2% 5% 2%;
+  position: relative;
+}
+
+.app-todo-add-form input {
+  font-size: 20px;
+  text-align: center;
+  height: 6vh;
+  width: 100%;
+  top: 20%;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-clip: padding-box;
+  border-radius: 1px;
+  min-height: 2.75vh;
+  margin-right: 5px;
+  border-bottom: 2px solid #6980d4;
+}
+
+.app-todo-edit-form .app-edit-input {
+  font-size: 20px;
+  text-align: center;
+  height: 6vh;
+  width: 100%;
+  top: 20%;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-clip: padding-box;
+  border-radius: 1px;
+  min-height: 2.75vh;
+  margin-right: 5px;
+  border-bottom: 2px solid #6980d4;
+}
+.app-todo-edit-form label {
+  transition: all 200ms ease-in-out;
+  position: absolute;
+  top: 15vh;
+}
+.app-todo-edit-form label:hover {
+  color: #6980d4;
+}
+.app-todo-edit-form label input {
+  position: absolute;
+  top: 0.05vh;
+  left: 105%;
+  transform: scale(1.2);
+}
+
+.app-todo-controls {
+  margin: 1% 0;
+}
+.app-todo-controls input {
+  text-align: center;
+  width: 4%;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  background-clip: padding-box;
+  border-radius: 1px;
+  min-height: 2.75vh;
+  margin-right: 5px;
+  border-bottom: 2px solid #6980d4;
+}
+.app-todo-controls button {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.app-todo-content {
+  max-width: 40%;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 0.5% 0 0 0;
+  padding: 5px;
+}
+.app-todo-content label {
+  transition: all 200ms ease-in-out;
+  margin-right: 5px;
+}
+.app-todo-content label:hover {
+  color: #6980d4;
+}
+.app-todo-content label input {
+  margin-left: 5px;
+}
+.app-todo-content button {
+  margin-right: 5px;
+  min-width: 10%;
+}
+
+.app-todo-content-controls {
+  margin-top: 5px;
+}
 
 /*# sourceMappingURL=ToDo.css.map */

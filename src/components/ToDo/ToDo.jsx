@@ -36,42 +36,45 @@ const ToDo = () => {
         deleteTodo(id);
     }
     const handleClickEdit = () => {
+        console.log(selectedTodo.id,selectedTodo.completed,selectedTodo.title)
         updateTodo(selectedTodo.id, selectedTodo.completed, selectedTodo.title)
         setSelectedTodo(null)
     }
     const handleChangeSelectedTodoCheckbox = (e) => {
         setSelectedTodo((prevState) => ({
-            ...prevState, completed: e.target.value
+            ...prevState, completed: e.target.checked
         }))
     }
     return (
         <div className="app-todos">
-            <div className="app-todo-add-edit-form">
                 {add && (
-                    <div>
+                    <div className="app-todo-add-form">
                         <input type="text" value={title} onChange={handleChangeTitle}/>
                         <button onClick={handleClickTitle}>Add Todo</button>
                     </div>
                 )}
                 {selectedTodo && (
-                    <div>
-                        <input type="text" value={selectedTodo.title} onChange={handleChangeSelectedTodoTitle}/>
-                        <input type='checkbox' value={selectedTodo.completed}
-                               onChange={handleChangeSelectedTodoCheckbox}/>
+                    <div className="app-todo-edit-form">
+                        <input type="text" value={selectedTodo.title} onChange={handleChangeSelectedTodoTitle} className="app-edit-input"/>
+                        <label htmlFor={selectedTodo.id}>
+                            Completed:
+                            <input id={selectedTodo.id} type='checkbox' checked={selectedTodo.completed}
+                                                 onChange={handleChangeSelectedTodoCheckbox} className="app-todo-edit-checkbox"/>
+                        </label>
                         <button onClick={handleClickEdit}>Edit Todo</button>
                     </div>
                 )}
-            </div>
+            <p>Filter todo's by UserId</p>
             <div className="app-todo-controls">
-                <p>Filter todo's by UserId</p>
                 <input type="text" value={userId} onChange={handleChangeId}/>
                 <button onClick={handleClickId}>Enter UserID</button>
-                <button onClick={() => setAdd(true)}>Add todo</button>
+                <button onClick={() => {setAdd(true)
+                    setSelectedTodo(null)}}>Add todo</button>
             </div>
-            <div className="app-todo-content">
-                {todoList.map((todo) => (
-                    <div key={todo.id}>
-                        <p>{todo.title}</p>
+            {todoList.map((todo) => (
+                <div key={todo.id} className="app-todo-content">
+                    <p>{todo.title}</p>
+                    <div className="app-todo-content-controls">
                         <label htmlFor={todo.id}>
                             Completed:
                             <input id={todo.id} type='checkbox' checked={todo.completed}
@@ -80,8 +83,8 @@ const ToDo = () => {
                         <button onClick={() => handleClickTodo(todo)}>Edit</button>
                         <button onClick={() => handleClickDelete(todo.id)}>Delete</button>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
         </div>
     )
 }
